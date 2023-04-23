@@ -1,6 +1,6 @@
 # Getting Ready
 
-Install latest [Android Studio version](https://developer.android.com/studio/preview) (I’m using Flamingo 2022.2.1). 
+Install latest [Android Studio version](https://developer.android.com/studio) (I’m using Flamingo 2022.2.1). 
 
 Make sure your Kotlin Plugin has 1.8.x version.
 
