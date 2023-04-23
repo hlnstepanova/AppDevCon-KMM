@@ -8,6 +8,6 @@ import io.ktor.serialization.kotlinx.json.*
 
 class KtorApiImpl {
 
-    val baseUrl = "https://enigmatic-sands-01782.herokuapp.com/"
+    val baseUrl = "https://kmpizza.fly.dev"
 
 }
