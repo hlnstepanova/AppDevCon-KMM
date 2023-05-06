@@ -13,6 +13,10 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
 
+    jvmToolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+
     cocoapods {
         summary = "Some description for the Shared Module"
         homepage = "Link to the Shared Module homepage"
@@ -27,12 +31,12 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // Ktor
-                implementation("io.ktor:ktor-client-core:2.1.0")
-                implementation("io.ktor:ktor-client-content-negotiation:2.0.3")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.3")
+                implementation("io.ktor:ktor-client-core:2.1.3")
+                implementation("io.ktor:ktor-client-content-negotiation:2.1.3")
+                implementation("io.ktor:ktor-serialization-kotlinx-json:2.1.3")
 
                 // Koin
-                api("io.insert-koin:koin-core:3.2.0")
+                api("io.insert-koin:koin-core:3.3.2")
 
                 // Coroutines
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
@@ -58,7 +62,7 @@ kotlin {
         val iosMain by creating {
             dependencies {
                 // Ktor
-                implementation("io.ktor:ktor-client-ios:2.0.3")
+                implementation("io.ktor:ktor-client-ios:2.1.3")
             }
             dependsOn(commonMain)
             iosX64Main.dependsOn(this)
@@ -83,5 +87,11 @@ android {
     defaultConfig {
         minSdk = 21
         targetSdk = 33
+    }
+    namespace = "dev.tutorial.kmmargherita"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
