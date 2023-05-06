@@ -28,7 +28,6 @@ Build and run the app.
 
 <img width="461" alt="Screenshot 2022-09-03 at 13 27 11" src="https://user-images.githubusercontent.com/12126043/188325610-64cf4d94-9eee-4a71-b7b8-958de8e84dd9.png">
 
-
 If the emulator starts, then everything is fine 👌
 
 <img width="264" alt="Screenshot 2022-09-03 at 13 29 33" src="https://user-images.githubusercontent.com/12126043/188325562-494b83e2-42d1-4a08-86e0-0e3dff6627ad.png">
@@ -77,8 +76,10 @@ In zshrc add and save: <b>export JAVA_HOME=$(/usr/libexec/java_home -v 17.0.7)</
 
  5) `export JAVA_HOME='/usr/libexec/java_home -v 17.0.7\'`
 
-6) Also make sure you're using the correct Gradle JDK version in Android Studio
+ 6) Also make sure you're using the correct Gradle JDK version in Android Studio
 
 <img width="400" alt="Screenshot 2023-05-06 at 12 12 08" src="https://user-images.githubusercontent.com/12126043/236618248-b6df361d-6f6c-4d5c-9ebe-97ed4d6acbd6.png">
+
+If nothing still works, you can try checking out ADC-0-starter branch and setting up your java environment to Java 11.
 
 
