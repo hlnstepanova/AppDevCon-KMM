@@ -5,11 +5,10 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = 34
     defaultConfig {
         applicationId = "dev.tutorial.kmmargherita.android"
         minSdk = 21
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
@@ -24,9 +23,16 @@ android {
         compose = true
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.4"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.5"
+    }
+    namespace = "dev.tutorial.kmmargherita.android"
+
 }
 
 dependencies {
