@@ -1,8 +1,8 @@
 # Getting Ready
 
-Install latest [Android Studio version](https://developer.android.com/studio) (I’m using Flamingo 2022.2.1).
+Install latest [Android Studio version](https://developer.android.com/studio)
 
-Install [XCode, command line tools tools and Simulator](https://apps.apple.com/us/app/xcode).
+Install [XCode, command line tools and Simulator](https://apps.apple.com/us/app/xcode).
 
 Make sure your Kotlin Plugin has 1.8.x version.
 
