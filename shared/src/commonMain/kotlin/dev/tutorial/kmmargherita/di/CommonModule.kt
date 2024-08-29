@@ -36,3 +36,5 @@ private val viewModelModule =
     module {
         single { RecipeViewModel() }
     }
+
+fun initKoin() = initKoin {}
