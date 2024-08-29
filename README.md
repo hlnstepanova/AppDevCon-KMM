@@ -35,7 +35,11 @@ First, in XCode open the  workspace from project -> iosApp -> iosApp.xcwokspace
 
 Then run the app.
 
-## If you run into a problem, it may be one of these:
+<img width="528" alt="image" src="https://github.com/user-attachments/assets/9caa5c20-09fb-4e57-9e40-e4ccb90c6cad">
+
+You may see some errors regarding shared module first, but try running again.
+
+## If it persists, it may be one of these:
 
 ### If you have a Apple M1 Chip and the next command in terminal returns empty:
 
