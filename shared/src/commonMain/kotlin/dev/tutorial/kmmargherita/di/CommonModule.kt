@@ -5,6 +5,7 @@ import dev.tutorial.kmmargherita.api.KtorApiImpl
 import dev.tutorial.kmmargherita.api.RecipesApi
 import dev.tutorial.kmmargherita.remote.RecipeRemoteSource
 import dev.tutorial.kmmargherita.repository.RecipeRepository
+import dev.tutorial.kmmargherita.viewmodel.RecipeViewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
@@ -15,6 +16,7 @@ fun initKoin(appDeclaration: KoinAppDeclaration) =
         modules(
             apiModule,
             repositoryModule,
+            viewModelModule,
         )
     }
 
@@ -28,4 +30,9 @@ private val repositoryModule =
     module {
         single { RecipeRepository() }
         factory { RecipeRemoteSource(get()) }
+    }
+
+private val viewModelModule =
+    module {
+        single { RecipeViewModel() }
     }
