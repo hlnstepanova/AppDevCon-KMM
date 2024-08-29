@@ -6,8 +6,24 @@ import io.ktor.client.request.*
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 
-class KtorApiImpl {
-
+class KtorApiImpl : KtorApi {
     val baseUrl = "https://kmpizza.fly.dev"
 
+    override val client =
+        HttpClient {
+            install(ContentNegotiation) {
+                json()
+            }
+        }
+
+    override fun HttpRequestBuilder.apiUrl(path: String) {
+        url {
+            takeFrom(baseUrl)
+            encodedPath = path
+        }
+    }
+
+    override fun HttpRequestBuilder.json() {
+        contentType(ContentType.Application.Json)
+    }
 }
