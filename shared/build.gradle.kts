@@ -8,8 +8,8 @@ plugins {
 version = "1.0"
 
 kotlin {
-  androidTarget()
-  jvm()
+    androidTarget()
+    jvm()
     iosArm64()
     iosSimulatorArm64()
 
@@ -29,33 +29,37 @@ kotlin {
             languageSettings.optIn("kotlin.experimental.ExperimentalObjCName")
         }
         commonMain.dependencies {
-                // Ktor
-                implementation("io.ktor:ktor-client-core:2.1.0")
-                implementation("io.ktor:ktor-client-content-negotiation:2.0.3")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:2.0.3")
+            // Ktor
+            implementation("io.ktor:ktor-client-core:2.1.3")
+            implementation("io.ktor:ktor-client-content-negotiation:2.1.3")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:2.1.3")
 
-                // Koin
-                api("io.insert-koin:koin-core:3.2.0")
+            // Koin
+            api("io.insert-koin:koin-core:3.3.2")
 
-                // Coroutines
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+            // Coroutines
+            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3") {
+                version {
+                    strictly("1.7.3")
+                }
             }
+        }
         commonTest.dependencies {
-                implementation(kotlin("test"))
-            }
+            implementation(kotlin("test"))
+        }
 
         androidMain.dependencies {
-                // Ktor
-                implementation("io.ktor:ktor-client-android:2.0.3")
+            // Ktor
+            implementation("io.ktor:ktor-client-android:2.1.3")
 
-                // Lifecycle
-                implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
-            }
+            // Lifecycle
+            implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+        }
 
         iosMain.dependencies {
-                // Ktor
-                implementation("io.ktor:ktor-client-ios:2.0.3")
-            }
+            // Ktor
+            implementation("io.ktor:ktor-client-ios:2.1.3")
+        }
     }
 }
 

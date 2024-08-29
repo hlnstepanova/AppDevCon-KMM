@@ -1,4 +1,3 @@
-
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -9,6 +8,7 @@ android {
     defaultConfig {
         applicationId = "dev.tutorial.kmmargherita.android"
         minSdk = 21
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
     }
@@ -32,7 +32,6 @@ android {
         kotlinCompilerExtensionVersion = "1.5.5"
     }
     namespace = "dev.tutorial.kmmargherita.android"
-
 }
 
 dependencies {
