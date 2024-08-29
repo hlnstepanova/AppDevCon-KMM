@@ -28,6 +28,12 @@ If the emulator starts, then everything is fine 👌
 
 <img width="264" alt="Screenshot 2022-09-03 at 13 29 33" src="https://user-images.githubusercontent.com/12126043/188325562-494b83e2-42d1-4a08-86e0-0e3dff6627ad.png">
 
+For ios:
+First, in XCode open the  workspace from project -> iosApp.
+<img width="366" alt="image" src="https://github.com/user-attachments/assets/700052c0-bb74-4e1b-96bd-4775aec9c991">
+
+Then run the app.
+
 ## If you run into a problem, it may be one of these:
 
 ### If you have a Apple M1 Chip and the next command in terminal returns empty:
