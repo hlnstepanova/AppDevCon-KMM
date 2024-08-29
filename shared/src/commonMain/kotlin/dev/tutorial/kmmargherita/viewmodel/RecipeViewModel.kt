@@ -11,11 +11,29 @@ import kotlinx.coroutines.launch
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class RecipeViewModel : KoinComponent {
-
+class RecipeViewModel :
+    CoroutineViewModel(),
+    KoinComponent {
     private val recipeRepository: RecipeRepository by inject()
 
     private val _recipes = MutableStateFlow<List<Recipe>>(emptyList())
     val recipes = _recipes.asStateFlow()
 
+    init {
+        getRecipes()
+    }
+
+    private fun getRecipes() {
+        coroutineScope.launch {
+            _recipes.value = recipeRepository.getRecipes()
+        }
+    }
+
+    @Suppress("unused")
+    fun observeRecipes(onChange: (List<Recipe>) -> Unit) {
+        recipes
+            .onEach {
+                onChange(it)
+            }.launchIn(coroutineScope)
+    }
 }
