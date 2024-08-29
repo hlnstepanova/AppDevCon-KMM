@@ -4,10 +4,6 @@ Install latest [Android Studio version](https://developer.android.com/studio)
 
 Install [XCode, command line tools and Simulator](https://apps.apple.com/us/app/xcode).
 
-Make sure your Kotlin Plugin has 1.8.x version.
-
-<img width="500" alt="Screenshot 2023-05-06 at 12 18 46" src="https://user-images.githubusercontent.com/12126043/236618334-59ce381d-cf68-4df4-af79-c97862b3b3e1.png">
-
 Make sure you have Ruby gem installed.
 `gem list`
 
